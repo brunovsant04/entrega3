@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro de Doador - ONG Tio Patinhas</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Cadastro de Doadores</h1>
+
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container form-page">
+    <form id="cadastroForm" class="card form-card" novalidate>
+      <fieldset>
+        <h3>INFORMAÇÕES PESSOAIS</h3>
+
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" pattern="\(\d{2}\)\s?\d{5}-\d{4}" maxlength="15" required>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required>
+
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento" required>
+
+        <label for="sexo">Sexo:</label>
+        <input list="sexo" id="sexo" name="sexo">
+        <datalist id="sexo">
+          <option value="Masculino">
+          <option value="Feminino">
+          <option value="Prefiro não dizer">
+        </datalist>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" placeholder="Logradouro, número" required>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" placeholder="00000-000" pattern="\d{5}-\d{3}" maxlength="9" required>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" maxlength="2" placeholder="UF" required>
+        
+      <fieldset style="margin-top: 30px;">
+        <legend><strong>TERMO DE ACEITE PARA DOADORES/COLABORADORES</strong></legend>
+
+        <details class="termo-detalhes">
+          <summary><strong>Clique para ler os termos </strong></summary>
+
+          <p>Ao aceitar este termo, o(a) colaborador(a) — seja como doador(a) ou voluntário(a) — manifesta sua vontade de contribuir voluntariamente com a ONG Tio Patinhas, instituição sem fins lucrativos dedicada à proteção, resgate, tratamento e adoção de animais em situação de vulnerabilidade.</p>
+
+          <p><strong>1. Contribuição:</strong> O(a) colaborador(a) declara estar ciente de que sua participação, seja por meio de doações financeiras, materiais ou de trabalho voluntário, é totalmente voluntária, sem qualquer contrapartida financeira ou vínculo empregatício, e será destinada exclusivamente às ações e projetos mantidos pela ONG.</p>
+          <p><strong>2. Finalidade:</strong> Os recursos e esforços doados poderão ser utilizados para: alimentação, abrigo e cuidados veterinários dos animais resgatados; campanhas de adoção, castração e conscientização; manutenção das estruturas físicas e operacionais da ONG; além de atividades de apoio, divulgação e atendimento realizadas por voluntários.</p>
+          <p><strong>3. Transparência:</strong> A ONG compromete-se a manter transparência na aplicação dos recursos financeiros e na gestão das atividades voluntárias, disponibilizando relatórios e informações sempre que solicitado.</p>
+          <p><strong>4. Privacidade:</strong> Os dados pessoais do(a) colaborador(a) serão utilizados exclusivamente para fins administrativos e de comunicação da ONG, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+          <p><strong>5. Cancelamento:</strong> O(a) colaborador(a) poderá interromper sua participação como doador(a) ou voluntário(a) a qualquer momento, mediante comunicação pelos canais oficiais da ONG.</p>
+          <p><strong>6. Declaração:</strong> Ao aceitar eletronicamente este termo, o(a) colaborador(a) declara estar ciente e de acordo com todas as condições aqui estabelecidas. Este aceite eletrônico tem validade jurídica como manifestação de vontade e registro de consentimento para os fins descritos.</p>
+        </details>
+
+  <label class="checkbox" style="margin-bottom: 20px;">
+    <input type="checkbox" id="aceito" required> Declaro que li e aceito os termos acima.
+  </label>
+</fieldset>
+<p></p>                                  
+    <button type="submit" class="btn primary">Finalizar Cadastro</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 ONG Tio Patinhas</p>
+    </div>
+  </footer>
+
+  <script type="module">
+  import { initFormValidation } from "./js/formValidation.js";
+  initFormValidation();
+</script>
+
+
+</body>
+</html>

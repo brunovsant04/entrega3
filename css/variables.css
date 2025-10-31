@@ -1,0 +1,30 @@
+:root{
+
+  --primary-100: #e6f2ff;
+  --primary-500: #1e88ff;
+  --primary-700: #1428ff;
+  --secondary-500: #ff9800;
+  --neutral-900: #0b0f18;
+  --neutral-700: #2e3440;
+  --neutral-400: #9aa4b2;
+  --neutral-100: #f4f6f8;
+  --white: #ffffff;
+
+
+  --font-sans: "Poppins", Arial, sans-serif;
+  --fs-xxl: 32px;
+  --fs-xl: 24px;
+  --fs-lg: 20px;
+  --fs-md: 16px;
+  --fs-sm: 14px;
+
+
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  --container-max: 1100px;
+}
