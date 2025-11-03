@@ -1,10 +1,8 @@
 export function initFormValidation() {
-  // Tenta ativar imediatamente (caso o formulário já exista no DOM)
   if (!attachValidation()) {
-    // Caso ainda não exista (por causa do carregamento via SPA), tenta de novo a cada 100ms
     const interval = setInterval(() => {
       if (attachValidation()) {
-        clearInterval(interval); // para o loop quando o formulário for encontrado
+        clearInterval(interval); 
       }
     }, 100);
   }
@@ -12,15 +10,12 @@ export function initFormValidation() {
 
 function attachValidation() {
   const form = document.getElementById("cadastroForm");
-  if (!form) return false; // o formulário ainda não está no DOM
+  if (!form) return false;
 
-  console.log("✅ Formulário encontrado e validação ativada!");
+  console.log("Formulário encontrado e validação ativada!");
 
-  // Remove qualquer listener anterior, evitando duplicidade
   form.removeEventListener("submit", handleSubmit);
   form.addEventListener("submit", handleSubmit);
-
-  return true; // indica que o formulário foi encontrado
 }
 
 function handleSubmit(e) {

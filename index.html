@@ -9,27 +9,37 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="brand"><span class="ong">ONG</span> <span class="tio-patinhas">Tio Patinhas</span></h1>
+      <h1 class="brand">
+        <span class="ong">ONG</span> <span class="tio-patinhas">Tio Patinhas</span>
+      </h1>
 
+      <!-- botão de menu acessivel -->
       <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
 
-      <nav id="main-nav" class="main-nav">
+   
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
         <ul class="nav-list">
           <li><a href="index.html">Início</a></li>
           <li class="has-dropdown">
             <a href="projetos.html">Projetos</a>
-           
           </li>
           <li><a href="cadastro.html">Seja um Doador/Colaborador</a></li>
           <li><a href="cadastro.html">Faça sua Doação</a></li>
         </ul>
       </nav>
+
+      <!-- modo esc -->
+      <button id="toggleTheme" 
+              aria-label="Alternar entre modo claro e escuro" 
+              title="Modo escuro (Alt + D)">
+        🌓
+      </button>
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" role="main">
     <figure class="hero">
       <img src="imagens/imagem1.jpeg" alt="Imagem de animais resgatados">
     </figure>
@@ -60,13 +70,12 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>&copy; 2025 ONG Tio Patinhas</p>
     </div>
   </footer>
 
   <script type="module" src="js/main.js"></script>
-
 </body>
 </html>

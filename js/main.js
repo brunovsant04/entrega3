@@ -1,3 +1,5 @@
+import { initThemeToggle } from "./themeToggle.js";
+initThemeToggle();
 import { loadPage } from "./router.js";
 
 document.addEventListener("DOMContentLoaded", () => {
